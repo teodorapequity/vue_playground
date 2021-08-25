@@ -2,9 +2,9 @@
   div#beer-details(v-if="beer")
     h1 Here is our Beer Details page!
     div Name: {{this.beer.name}}
-    div Tagline: {{beer.tagline}}
-    div First brewed: {{beer.first_brewed}}
-    div Description: {{beer.description}}
+    div Tagline: {{this.beer.tagline}}
+    div First brewed: {{this.beer.first_brewed}}
+    div Description: {{this.beer.description}}
 </template>
 
 <script>
@@ -13,9 +13,6 @@ export default {
   name: 'BeerDetails',
   data() {
       return {
-      isLoading: true,
-      isError: false,
-      errors: [],
       beer: null
     }
   },

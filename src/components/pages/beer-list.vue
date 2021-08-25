@@ -1,7 +1,7 @@
 <template lang="pug">
-  div.test(:id="beer-list")
+  div(id="beer-list")
     h1 Here is our Beer List page!
-    ul#id=example-1
+    ul#example-1
       li(v-for="item in beers" v-bind:key="item.id")
         a(v-on:click="select(item)") {{ item.name }}
 </template>
@@ -12,9 +12,6 @@ export default {
   name: 'BeerList',
   data() {
     return {
-      isLoading: true,
-      isError: false,
-      errors: [],
       beers: []
     }
   },
@@ -40,10 +37,4 @@ export default {
 }
 </script>
 
-<style lang="sass"> 
-.test
-    @apply pl-5
-    @apply bg-red-700
-    @apply border border-gray-300
-    border-radius: 5px
-</style>
+
